@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.3">
+  <diagram name="Page-1" id="DB28gYz7CAjJAxLedTfL">
+    <mxGraphModel dx="1434" dy="772" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1-lD9ESEsM2yIj8ZEq_z-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1-lD9ESEsM2yIj8ZEq_z-1" target="1-lD9ESEsM2yIj8ZEq_z-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1-lD9ESEsM2yIj8ZEq_z-1" value="User passes video link in a text box" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="295" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1-lD9ESEsM2yIj8ZEq_z-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1-lD9ESEsM2yIj8ZEq_z-4" target="1-lD9ESEsM2yIj8ZEq_z-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1-lD9ESEsM2yIj8ZEq_z-4" value="Video gets downloaded and saved as a temp file (deleted after processing is done)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="280" width="135" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="1-lD9ESEsM2yIj8ZEq_z-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1-lD9ESEsM2yIj8ZEq_z-6" target="1-lD9ESEsM2yIj8ZEq_z-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1-lD9ESEsM2yIj8ZEq_z-6" value="Extract audio using FFMPEG" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="280" width="135" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="1-lD9ESEsM2yIj8ZEq_z-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1-lD9ESEsM2yIj8ZEq_z-8" target="1-lD9ESEsM2yIj8ZEq_z-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1-lD9ESEsM2yIj8ZEq_z-8" value="Use Whisper to convert speech to text" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="280" width="135" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="1-lD9ESEsM2yIj8ZEq_z-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1-lD9ESEsM2yIj8ZEq_z-10" target="1-lD9ESEsM2yIj8ZEq_z-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1-lD9ESEsM2yIj8ZEq_z-10" value="Preprocess text&lt;div&gt;(Remove stop words and break down the transcript into smaller segments based on timestamps if necessary)&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="587.5" y="450" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="1-lD9ESEsM2yIj8ZEq_z-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1-lD9ESEsM2yIj8ZEq_z-12" target="1-lD9ESEsM2yIj8ZEq_z-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1-lD9ESEsM2yIj8ZEq_z-12" value="Pass the System Prompt + User Prompt to an LLM to Summarize" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="367.5" y="450" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="1-lD9ESEsM2yIj8ZEq_z-14" value="Display the result to the user with an option to save the text" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="147.5" y="450" width="140" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
