@@ -18,14 +18,16 @@ RUN apt-get update && apt-get install -y \
 # Create symbolic link for python3
 RUN ln -sf /usr/bin/python3.10 /usr/bin/python
 
-# Set working directory
-WORKDIR /app
-
 # Copy requirements first to leverage Docker cache
-COPY requirements.txt .
+COPY ./requirements.txt .
+
 
 # Install Python dependencies
 RUN pip3 install --no-cache-dir -r requirements.txt
+
+# Set working directory
+WORKDIR /app
+
 
 # Copy the rest of the application
 COPY . .
